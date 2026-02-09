@@ -38,7 +38,7 @@ export default async function VendorsPage() {
   ];
 
   return (
-    <div className=\"min-h-screen bg-[#E8F5ED]\">
+    <div className="min-h-screen bg-[#E8F5ED]">
       <Navbar />
 
       {/* Hero Section */}
