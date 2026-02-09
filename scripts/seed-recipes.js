@@ -162,10 +162,10 @@ async function seedRecipesAndImpact() {
     // Create impact stories
     const impactStories = await ImpactStory.create([
       {
-        title: 'Empowering Fatmata\\'s Community',
+        title: 'Empowering Fatmata\'s Community',
         description:
-          'Fatmata\\'s Farm has transformed from a small family operation into a thriving cooperative supporting 25 local women. Through Wi Root partnership, they now have consistent market access and fair pricing.',
-        vendorName: 'Fatmata\\'s Farm',
+          'Fatmata\'s Farm has transformed from a small family operation into a thriving cooperative supporting 25 local women. Through Wi Root partnership, they now have consistent market access and fair pricing.',
+        vendorName: 'Fatmata\'s Farm',
         location: 'Freetown',
         metrics: {
           womenEmployed: 25,
@@ -175,7 +175,7 @@ async function seedRecipesAndImpact() {
         featured: true,
       },
       {
-        title: 'Mariama\\'s Success Story',
+        title: 'Mariama\'s Success Story',
         description:
           'From traditional methods to modern standards, Mariama Enterprises has built a reputation for quality. Their partnership with Wi Root has enabled expansion and education support for community children.',
         vendorName: 'Mariama Enterprises',
@@ -188,10 +188,10 @@ async function seedRecipesAndImpact() {
         featured: true,
       },
       {
-        title: 'Kadiatu\\'s Award-Winning Cooperative',
+        title: 'Kadiatu\'s Award-Winning Cooperative',
         description:
-          'An award-winning women\\'s cooperative that has become a model for sustainable farming practices. Through Wi Root, they\\'ve reached national markets and empowered rural women.',
-        vendorName: 'Kadiatu\\'s Cassava Co.',
+          'An award-winning women\'s cooperative that has become a model for sustainable farming practices. Through Wi Root, they\'ve reached national markets and empowered rural women.',
+        vendorName: 'Kadiatu\'s Cassava Co.',
         location: 'Makeni',
         metrics: {
           womenEmployed: 30,
