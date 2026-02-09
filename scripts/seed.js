@@ -1,16 +1,38 @@
 const mongoose = require('mongoose');
-const connectDB = require('./lib/db');
-const Vendor = require('./lib/models/Vendor');
-const Product = require('./lib/models/Product');
-const User = require('./lib/models/User');
+const path = require('path');
+require('dotenv').config({ path: path.join(__dirname, '..', '.env') });
 
-require('dotenv').config();
+const MONGO_URL = process.env.MONGO_URL;
+const DB_NAME = process.env.DB_NAME || 'wiroot_db';
+
+// Mongoose Schemas
+const VendorSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  phone: { type: String },
+  location: { type: String },
+  bio: { type: String },
+  isActive: { type: Boolean, default: true },
+}, { timestamps: true });
+
+const ProductSchema = new mongoose.Schema({
+  vendorId: { type: mongoose.Schema.Types.ObjectId, ref: 'Vendor', required: true },
+  name: { type: String, required: true },
+  description: { type: String },
+  weightKg: { type: Number, required: true },
+  price: { type: Number, required: true },
+  stockQuantity: { type: Number, default: 0 },
+  isAvailable: { type: Boolean, default: true },
+  imageUrl: { type: String },
+}, { timestamps: true });
+
+const Vendor = mongoose.models.Vendor || mongoose.model('Vendor', VendorSchema);
+const Product = mongoose.models.Product || mongoose.model('Product', ProductSchema);
 
 async function seedDatabase() {
   try {
     console.log('🌱 Starting database seed...');
     
-    await connectDB();
+    await mongoose.connect(MONGO_URL, { dbName: DB_NAME });
     console.log('✅ Connected to MongoDB');
 
     // Clear existing data
