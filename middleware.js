@@ -4,9 +4,18 @@ const isPublicRoute = createRouteMatcher([
   '/',
   '/sign-in(.*)',
   '/sign-up(.*)',
+  '/shop(.*)',
   '/products(.*)',
+  '/recipes(.*)',
+  '/our-impact(.*)',
+  '/vendors(.*)',
+  '/contact(.*)',
+  '/faq(.*)',
   '/api/products(.*)',
+  '/api/recipes(.*)',
   '/api/reviews(.*)',
+  '/api/contact(.*)',
+  '/api/impact(.*)',
 ]);
 
 const isAdminRoute = createRouteMatcher([
