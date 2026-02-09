@@ -1,16 +1,21 @@
-import './globals.css'
+import './globals.css';
+import { ClerkProvider } from '@clerk/nextjs';
+import { Toaster } from 'sonner';
 
 export const metadata = {
-  title: 'Next.js MongoDB Template',
-  description: 'A simple template with App Router, MongoDB, and shadcn/ui',
-}
+  title: 'Wi Root - Cassava Flour E-Commerce',
+  description: 'Empowering women-led vendors with quality cassava flour',
+};
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body>
-        {children}
-      </body>
-    </html>
-  )
+    <ClerkProvider>
+      <html lang="en">
+        <body>
+          {children}
+          <Toaster position="top-right" />
+        </body>
+      </html>
+    </ClerkProvider>
+  );
 }
