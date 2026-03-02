@@ -178,7 +178,7 @@ Using shadcn/ui components:
 
 ## 📄 License
 
-MIT License - feel free to use this project for your own purposes.
+Proprietary Software — All rights reserved. Unauthorized copying, distribution, modification, or disclosure is prohibited without express written permission from Wi Root. Intended for internal use and authorized collaborators only.
 
 ## 🙏 Acknowledgments
 
